@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "albumTitle": "Ghost Stories",
+        "artist": "Coldplay",
+        "year": "2014",
+        "price": "59,99",
+        "coverImageName": "ghost_stories"
+    },
+    {
+        "id": 2,
+        "albumTitle": "Midnight Sky - Single",
+        "artist": "Miley Cyrus",
+        "year": "2020",
+        "price": "29,99",
+        "coverImageName": "midnight_sky"
+    },
+    {
+        "id": 3,
+        "albumTitle": "Changes",
+        "artist": "Justin Bieber",
+        "year": "2020",
+        "price": "49,99",
+        "coverImageName": "changes"
+    },
+    {
+        "id": 4,
+        "albumTitle": "Jarmark",
+        "artist": "Taco Hemingway",
+        "year": "2020",
+        "price": "39,99",
+        "coverImageName": "jarmark"
+    }
+]
