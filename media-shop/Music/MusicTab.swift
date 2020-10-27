@@ -10,7 +10,7 @@ import SwiftUI
 struct MusicTab: View {
     var body: some View {
         NavigationView {
-            VStack() {
+            ScrollView() {
                 NavigationLink(destination: NewMusic()){
                     HStack() {
                         Text("Nowe")
@@ -24,32 +24,7 @@ struct MusicTab: View {
                 ScrollView(.horizontal) {
                     HStack() {
                         ForEach(musicData) { music in
-                            NavigationLink(destination: MusicDetails()) {
-                                VStack(alignment: .leading) {
-                                    music.cover
-                                        .resizable()
-                                        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                                        .scaledToFill()
-                                    HStack() {
-                                        VStack(alignment: .leading){
-                                            Text(music.albumTitle)
-                                                .font(.headline)
-                                                .foregroundColor(Color.black)
-                                                .lineLimit(1)
-                                            Text(music.artist)
-                                                .font(.subheadline)
-                                                .foregroundColor(Color.black)
-                                        }
-                                        Spacer()
-                                        VStack(alignment: .leading){
-                                            Text(music.price + " zł")
-                                                .foregroundColor(Color.black)
-                                        }
-                                    }
-                                    .padding(.bottom)
-                                }
-                                .padding([.leading, .bottom])
-                            }
+                            ContentTile(extraInfo: music.artist, content: music)
                         }
                     }
                 }
@@ -66,32 +41,7 @@ struct MusicTab: View {
                 ScrollView(.horizontal) {
                     HStack() {
                         ForEach(bestMusicData) { music in
-                            NavigationLink(destination: MusicDetails()) {
-                                VStack(alignment: .leading) {
-                                    music.cover
-                                        .resizable()
-                                        .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                                        .scaledToFill()
-                                    HStack() {
-                                        VStack(alignment: .leading){
-                                            Text(music.albumTitle)
-                                                .font(.headline)
-                                                .foregroundColor(Color.black)
-                                                .lineLimit(1)
-                                            Text(music.artist)
-                                                .font(.subheadline)
-                                                .foregroundColor(Color.black)
-                                        }
-                                        Spacer()
-                                        VStack(alignment: .leading){
-                                            Text(music.price + " zł")
-                                                .foregroundColor(Color.black)
-                                        }
-                                    }
-                                    .padding(.bottom)
-                                }
-                                .padding([.leading, .bottom])
-                            }
+                            ContentTile(extraInfo: music.artist, content: music)
                         }
                     }
                 }
@@ -108,7 +58,7 @@ struct MusicTab: View {
 
 struct MusicTab_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone 12","iPad Air (4th generation)"], id: \.self) { deviceName in
+        ForEach(["iPhone SE (1st generation)","iPhone 12","iPad Air (4th generation)"], id: \.self) { deviceName in
             MusicTab()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
