@@ -8,4 +8,5 @@ struct Music: Hashable, Codable, Identifiable, Content {
     var artist: String
     var year: String
     var description: String
+    var trackList: [Track]
 }

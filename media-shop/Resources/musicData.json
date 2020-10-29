@@ -1,137 +1,977 @@
 [
-    {
-        "id": 1,
-        "title": "Ghost Stories",
-        "artist": "Coldplay",
-        "year": "2014",
-        "price": "59,99",
-        "mainImageName": "ghost_stories",
-        "description": "„Ghost Stories” to szósty studyjny album grupy Coldplay. W studiu Chrisa Martina i kolegów wspierał Jon Hopkins, a także współpracownik Adele, Paul Epworth. W nadanie brzmienia krążkowi zaangażowani byli również między innymi Rik Simpson i Dan Green oraz basista Coldplay, Guy Berryman.\n\nPierwszym oficjalnym singlem promującym album jest kawałek „Magic”. Do piosenki powstał teledysk, który zrealizował wielki mistrz wideoklipów, laureat Grammy, Szwed Jonas Åkerlund, który ma na koncie współpracę chociażby z Madonną, Britney Spears, Lady Gagą, Robbie'em Williamsem, Ozzym Osbourne'em, Davidem Guettą i Rammstein. Lider Coldplay, Chris Martin, wciela się w filmiku w lojalnego asystenta i jednocześnie brutalnego męża osoby czyniącej magiczne sztuczki. Z kolei tę rolę gra jedna z największych i najpiękniejszych gwiazd kina, Chinka Ziyi Zhang, którą znamy chociażby z filmu „Przyczajony tygrys, ukryty smok”."
-    },
-    {
-        "id": 2,
-        "title": "Midnight Sky - Single",
-        "artist": "Miley Cyrus",
-        "year": "2020",
-        "price": "29,99",
-        "mainImageName": "midnight_sky",
-        "description": ""
-    },
-    {
-        "id": 3,
-        "title": "Changes",
-        "artist": "Justin Bieber",
-        "year": "2020",
-        "price": "49,99",
-        "mainImageName": "changes",
-        "description": "Justin Bieber ogłosił, że jego piąty album studyjny nosi tytuł „Changes”. Artysta zaprezentował też kolejny utwór z płyty – „Get Me” w duecie z Kehlani.\n\n„Changes” – krążek wypełniony futurystycznymi brzmieniami r&b, pop, trap i soul – trafi do sklepów i serwisów cyfrowych 14 lutego 2020. W dniu, w którym ruszyła oficjalna przedsprzedaż albumu, na YouTube pojawił się pierwszy odcinek serialu dokumentalnego „Justin Bieber: Seasons”, który prezentuje kulisy nagrań „Changes” oraz wydarzenia z jego życie.\n\nJustin Bieber po raz kolejny króluje na listach przebojów: pierwszy singiel promujący „Changes”, utwór „Yummy”, został dodany do rekordowej liczby playlist w Stanach, natomiast liczba streamów piosenki przekroczyła już 300 mln."
-    },
-    {
-        "id": 4,
-        "title": "Jarmark",
-        "artist": "Taco Hemingway",
-        "year": "2020",
-        "price": "39,99",
-        "mainImageName": "jarmark",
-        "description": ""
-    },
-    {
-        "id": 5,
-        "title": "After Hours",
-        "artist": "The Weeknd",
-        "year": "2020",
-        "price": "59,99",
-        "mainImageName": "after_hours",
-        "description": "The Weeknd zapowiada nowy album „After Hours”.\n\nThe Weeknd potwierdził tytuł i datę premiery nowego albumu. Już teraz możemy posłuchać kawałka tytułowego – „After Hours”.\n\nKanadyjski wokalista, który niedawno skończył 30 lat, zapowiedział, że jego najnowszy album „After Hours” ukaże się 20 marca 2020. The Weeknd udostępnił tytułowy kawałek, który idealnie oddaje klimat tytułowego czasu po godzinach. Kontynuując opowieść o mrocznej, miejskiej nocy, artysta śpiewa: „Moje najmroczniejsze godziny / Dziewczyno, czuję się bardzo samotny w tym zatłoczonym pomieszczeniu / Różne dziewczyny na parkiecie, rozpraszają moje myślenie o tobie / Stałem się tym facetem, którym już kiedyś byłem, byłem / Staram się zasnąć / By być bliżej ciebie w moich snach / Nie chciałem się budzić, dopóki przy mnie nie będziesz / Chciałem, byś po prostu zadzwoniła i powiedziała, powiedziała”.\n\n„After Hours” będzie czwartym długogrającym albumem artysty. Na krążku znajdą się wydane w 2019 hitowe single „Heartless” oraz „Blinding Lights”. Dotychczasową dyskografię The Weekend zamyka multiplatynowy „Starboy” z 2016, a w 2018 ukazała się EP-ka „My Dear Melancholy”."
-    },
-    {
-        "id": 6,
-        "title": "Everyday Life",
-        "artist": "Coldplay",
-        "year": "2019",
-        "price": "55,99",
-        "mainImageName": "everyday_life",
-        "description": "Ósmy album Coldplay’a „Everyday Life” składa się z dwóch części: „Sunrise” i „Sunset”. Krążek został wyprodukowany przez The Dream Team. Gościnnie wystąpili na nim Stromae, Femi Kuti, Tiwa Savage i Jacob Collier. Okładka albumu oparta jest na zdjęciu z 1919 roku zespołu pradziadka gitarzysty Jonny'ego Bucklanda."
-    },
-    {
-        "id": 7,
-        "title": "everything i wanted - Single",
-        "artist": "Billie Eilish",
-        "year": "2018",
-        "price": "29,99",
-        "mainImageName": "everything_i_wanted_single",
-        "description": ""
-    },
-    {
-        "id": 8,
-        "title": "Geniusz",
-        "artist": "Rasmentalism",
-        "year": "2020",
-        "price": "49,99",
-        "mainImageName": "geniusz",
-        "description": "Parafrazując klasyka - wszyscy jesteśmy geniuszami. Albo nikt z nas. O tym będzie najnowszy album zespołu Rasmentalism o tym przewrotnym tytule. „Geniusz” to zdecydowanie Rasmentalism a.d. 2020, z jednej  strony bardzo hiphopowy gościnny udział Białasa, a z drugiej Dawid Podsiadło czy Kuba Badach. Ras i Ment XXL przygotowali genialną mieszankę muzyczną."
-    },
-    {
-        "id": 9,
-        "title": "Małomiasteczkowy",
-        "artist": "Dawid Podsiadło",
-        "year": "2018",
-        "price": "25,99",
-        "mainImageName": "malomiasteczkowy",
-        "description": "Stare przysłowie mówi, że ze szczytu wszystkie drogi wiodą w dół. Ale choć jesienią 2016 roku Dawid Podsiadło był na szczycie – z dwiema diamentowymi płytami w dorobku, całym wagonem nagród i wyprzedaną wielką trasą koncertową – ani myślał schodzić. Zrobił więc sobie kilka miesięcy przerwy od sceny, by wymyślić się na nowo.\n\nChoć złota zasada mówi, że w zwycięskiej drużynie nie dokonuje się zmian, Podsiadło zrezygnował tym razem ze współpracy z Bogdanem Kondrackim, producentem jego dotychczasowych nagrań. Zaryzykował, ale powierzył swój los w ręce innego wybitnego fachowca – Bartosz Dziedzic stoi bowiem za sukcesami albumów „Granda” Moniki Brodki i „Składam się z ciągłych powtórzeń” Artura Rojka.\n\nPanowie nie próbowali jednak powtórzyć tamtych rozwiązań, postanowili również zerwać z dotychczasowym, poprockowym charakterem muzyki Dawida.\n- „Na początku naszej współpracy Bartek powiedział, że chciałby zrobić przebojową płytę. Twierdził, że bardziej zaskakujące będzie, jeśli zrobię kilka przyjemnych, chwytliwych piosenek, niż gdybym próbował sił w muzyce alternatywnej. Ja też uznałem zrobienie dobrej popowej płyty za dużo większe wyzwanie i chciałem się z nim zmierzyć” – mówi wokalista.\n\nWydany u progu wakacji singel „Małomiasteczkowy” był dowodem na to, że poszukiwania Dawida i Bartka idą w dobrą stronę. Dynamiczny, taneczny numer – dziś już to wiemy: przebój polskiego lata 2018 – nie mówił jednak wszystkiego o nowym materiale. Całość płyty, której dał tytuł, nie jest bowiem aż tak intensywna, choć dominują na niej wyraziste rytmy i brzmienia syntezatorów, często dość zaskakujące. Partie wokalne są zróżnicowane, ale pełne swobody, słychać, że ich wykonawca bawi się muzyką.\n\nNiespodzianką może być również fakt, że Dawid Podsiadło po raz pierwszy zaśpiewał całą płytę po polsku.\n- „Obiecałem to sobie jakiś czas temu i choć miałem chwile zwątpienia, udało mi się je przezwyciężyć” – przyznaje – „Dziś mogę powiedzieć, że jestem z tych tekstów naprawdę zadowolony”.\n\nNa „Małomiasteczkowym” Podsiadło porusza niełatwe tematy – „od problemów z komunikacją związku, przez ciemne strony sławy po poszukiwanie w sobie siły i odwagi – ale podaje je w błyskotliwej formie i z właściwym sobie specyficznym humorem”.\n\n„Małomiasteczkowy” jest płytą, której nikt się po Dawidzie nie spodziewał, ale wszyscy jej od niego oczekiwali – jeśli bowiem nie on miałby podnieść sobie poprzeczkę jeszcze wyżej, to kto?"
-    },
-    {
-        "id": 10,
-        "title": "Mylo Xyloto",
-        "artist": "Coldplay",
-        "year": "2011",
-        "price": "29,99",
-        "mainImageName": "mylo_xyloto",
-        "description": "Piąty studyjny album Coldplay zatytułowany Mylo Xyloto (wymawiane „majlo zajleto”). Producentami płyty są Markus Dravs, Daniel Green i Rik Simpson, a dodatkowe kompozycje i podrasowanie brzmień  to dzieło Briana Eno. Poprzedni album Coldplay Viva La Vida z 2008 roku zdobył pierwszej miejsce w 36. krajach, w tym Wielkiej Brytanii i USA."
-    },
-    {
-        "id": 11,
-        "title": "Night Visions (Deluxe)",
-        "artist": "Imagine Dragons",
-        "year": "2012",
-        "price": "29,99",
-        "mainImageName": "night_visions_deluxe",
-        "description": "Imagine Dragons to amerykańska kapela rockowa która powstała w Las Vegas w 2008 roku. Mają na koncie kontrakt z Interscope Records, kilka EP, ale przede wszystkim rewelacyjny, debiutancki album „Night Visions”, za którego sprawą odnieśli spektakularny sukces niemal na całym świecie (m.in. 3,5 miliona sprzedanych płyt, #1 na Billboard Chart).\n\nNa fali tego sukcesu i w oczekiwaniu na drugi album, Imagine Dragons przygotowali dla swoich fanów specjalną edycję albumu „Night Visions” – wersję deluxe poszerzoną o 7 dodatkowych utworów!"
-    },
-    {
-        "id": 12,
-        "title": "POCZTÓWKA Z WWA, LATO '19",
-        "artist": "Taco Hemingway",
-        "year": "2019",
-        "price": "39,99",
-        "mainImageName": "pocztowka_z_wwa",
-        "description": "„To wszystko dziełem przypadku”…\n\n„Jeszcze na początku maja pisałem zupełnie inną płytę. Obiecałem sobie, że tym razem dam sobie tyle czasu, ile będzie trzeba. Zapowiedziana na rok 2019 przerwa wydawnicza miała być więc wymogiem logistycznym. Okazało się jednak, że jestem uzależniony od wydawania nowego materiału w lato. Cóż począć. I tak właśnie powstała „Pocztówka”. Po roku 2018, erze silnego skupiania się na sobie („SOMA” + „Café Belga” + „Flagey”), czas wymienić lustro na teleskop i wrócić do obserwowania miasta i społeczeństwa. Żeby jednak zadowolić ten segment słuchaczy, który lubi posłuchać sobie moich mniej lub bardziej zrytmizowanych neurotyzmów, postanowiłem dać im upust w stuwersowych „Kabrioletach” zamykających standardową wersję płyty. Pierwszy raz w życiu w swoich działaniach solowych zdecydowałem się zaprosić na płytę kilku gości, i to dość zróżnicowanych pod kątem muzycznym i osobowościowym.\n\nJako że nic mnie tak nie mierzi jak mitologizacja poetów, muzyków i artystów, powiem to najprościej jak się da: przed tobą znajduje się seria dźwięków i garść obserwacji. Tylko i aż tyle.\n\nNie jest to rozprawka ani reportaż. Nie jest to esej ani epopeja. Nie jest to manifest, memoir ani moralitet. Jest to pocztówka. Oto kilka opowieści z Warszawy. Ode mnie, dla was. Niechaj umili wam to kolejne burzliwe lato” – mówi artysta."
-    },
-    {
-        "id": 13,
-        "title": "Trench",
-        "artist": "twenty one pilots",
-        "year": "2018",
-        "price": "35,99",
-        "mainImageName": "trench",
-        "description": "„Trench” to najnowsza płyta Twenty One Pilots, następca wydanej w 2015 roku „Blurryface”.\n\nPoprzedni krążek grupy stał się pierwszym w historii albumem z którego wszystkie utwory pokryły się co najmniej złotem.\n\nNowe utwory od Josha i Tylera to mieszanka indie rocka, hip-hopu, punka i popowych melodii. Album promuje potrójny singiel „Jumpsuit”, Nico & The Niners” oraz „Levitate”."
-    },
-    {
-        "id": 14,
-        "title": "Youniverse",
-        "artist": "Tee Lopes",
-        "year": "2018",
-        "price": "19,99",
-        "mainImageName": "youniverse",
-        "description": ""
-    },
-    {
-        "id": 15,
-        "title": "Znikam Na Chwilę",
-        "artist": "Linia Nocna",
-        "year": "2018",
-        "price": "29,99",
-        "mainImageName": "znikam_na_chwile",
-        "description": "Linia Nocna to duet, który tworzą Monika Mimi Wydrzyńska i Mikołaj Trybulec.\n\nDebiutowali w czerwcu 2017 roku singlem „Znikam na chwilę”, za który otrzymali nagrodę redakcji Chillizet w plebiscycie na „Chilloutowy utwór roku 2017”.\n\nIch debiutancki album charakteryzują elektroniczne brzmienia i nowoczesne produkcje, a w warstwie wokalno-tekstowej nie brakuje w nim delikatności i poetyckości.\n\nW nagraniach gościnnie wzięli udział Kuba Sienkiewicz oraz Buslav."
-    }
+  {
+    "id" : 1,
+    "title" : "Ghost Stories",
+    "artist" : "Coldplay",
+    "year" : "2014",
+    "price" : "59,99",
+    "mainImageName" : "ghost_stories",
+    "description" : "„Ghost Stories” to szósty studyjny album grupy Coldplay. W studiu Chrisa Martina i kolegów wspierał Jon Hopkins, a także współpracownik Adele, Paul Epworth. W nadanie brzmienia krążkowi zaangażowani byli również między innymi Rik Simpson i Dan Green oraz basista Coldplay, Guy Berryman.\n\nPierwszym oficjalnym singlem promującym album jest kawałek „Magic”. Do piosenki powstał teledysk, który zrealizował wielki mistrz wideoklipów, laureat Grammy, Szwed Jonas Åkerlund, który ma na koncie współpracę chociażby z Madonną, Britney Spears, Lady Gagą, Robbie'em Williamsem, Ozzym Osbourne'em, Davidem Guettą i Rammstein. Lider Coldplay, Chris Martin, wciela się w filmiku w lojalnego asystenta i jednocześnie brutalnego męża osoby czyniącej magiczne sztuczki. Z kolei tę rolę gra jedna z największych i najpiękniejszych gwiazd kina, Chinka Ziyi Zhang, którą znamy chociażby z filmu „Przyczajony tygrys, ukryty smok”.",
+    "trackList" : [
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 2,
+        "trackNumber" : 2,
+        "trackName" : "Magic",
+        "audioFileName" : "gs2"
+      },
+      {
+        "id" : 3,
+        "trackNumber" : 3,
+        "trackName" : "Ink",
+        "audioFileName" : "gs3"
+      },
+      {
+        "id" : 4,
+        "trackNumber" : 4,
+        "trackName" : "True Love",
+        "audioFileName" : "gs4"
+      },
+      {
+        "id" : 5,
+        "trackNumber" : 5,
+        "trackName" : "Midnight",
+        "audioFileName" : "gs5"
+      },
+      {
+        "id" : 6,
+        "trackNumber" : 6,
+        "trackName" : "Another's Arms",
+        "audioFileName" : "gs6"
+      },
+      {
+        "id" : 7,
+        "trackNumber" : 7,
+        "trackName" : "Oceans",
+        "audioFileName" : "gs7"
+      },
+      {
+        "id" : 8,
+        "trackNumber" : 8,
+        "trackName" : "A Sky Full of Stars",
+        "audioFileName" : "gs8"
+      },
+      {
+        "id" : 9,
+        "trackNumber" : 9,
+        "trackName" : "O",
+        "audioFileName" : "gs9"
+      }
+    ]
+  },
+  {
+    "id" : 2,
+    "title" : "Midnight Sky - Single",
+    "artist" : "Miley Cyrus",
+    "year" : "2020",
+    "price" : "29,99",
+    "mainImageName" : "midnight_sky",
+    "description" : "",
+    "trackList" : [
+      {
+        "id" : 0,
+        "trackNumber" : 0,
+        "trackName" : "",
+        "audioFileName" : ""
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 8,
+        "trackNumber" : 8,
+        "trackName" : "O",
+        "audioFileName" : "gs8"
+      }
+    ]
+  },
+  {
+    "id" : 3,
+    "title" : "Changes",
+    "artist" : "Justin Bieber",
+    "year" : "2020",
+    "price" : "49,99",
+    "mainImageName" : "changes",
+    "description" : "Justin Bieber ogłosił, że jego piąty album studyjny nosi tytuł „Changes”. Artysta zaprezentował też kolejny utwór z płyty – „Get Me” w duecie z Kehlani.\n\n„Changes” – krążek wypełniony futurystycznymi brzmieniami r&b, pop, trap i soul – trafi do sklepów i serwisów cyfrowych 14 lutego 2020. W dniu, w którym ruszyła oficjalna przedsprzedaż albumu, na YouTube pojawił się pierwszy odcinek serialu dokumentalnego „Justin Bieber: Seasons”, który prezentuje kulisy nagrań „Changes” oraz wydarzenia z jego życie.\n\nJustin Bieber po raz kolejny króluje na listach przebojów: pierwszy singiel promujący „Changes”, utwór „Yummy”, został dodany do rekordowej liczby playlist w Stanach, natomiast liczba streamów piosenki przekroczyła już 300 mln.",
+    "trackList" : [
+      {
+        "id" : 0,
+        "trackNumber" : 0,
+        "trackName" : "",
+        "audioFileName" : ""
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 8,
+        "trackNumber" : 8,
+        "trackName" : "O",
+        "audioFileName" : "gs8"
+      }
+    ]
+  },
+  {
+    "id" : 4,
+    "title" : "Jarmark",
+    "artist" : "Taco Hemingway",
+    "year" : "2020",
+    "price" : "39,99",
+    "mainImageName" : "jarmark",
+    "description" : "",
+    "trackList" : [
+      {
+        "id" : 0,
+        "trackNumber" : 0,
+        "trackName" : "",
+        "audioFileName" : ""
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 8,
+        "trackNumber" : 8,
+        "trackName" : "O",
+        "audioFileName" : "gs8"
+      }
+    ]
+  },
+  {
+    "id" : 5,
+    "title" : "After Hours",
+    "artist" : "The Weeknd",
+    "year" : "2020",
+    "price" : "59,99",
+    "mainImageName" : "after_hours",
+    "description" : "The Weeknd zapowiada nowy album „After Hours”.\n\nThe Weeknd potwierdził tytuł i datę premiery nowego albumu. Już teraz możemy posłuchać kawałka tytułowego – „After Hours”.\n\nKanadyjski wokalista, który niedawno skończył 30 lat, zapowiedział, że jego najnowszy album „After Hours” ukaże się 20 marca 2020. The Weeknd udostępnił tytułowy kawałek, który idealnie oddaje klimat tytułowego czasu po godzinach. Kontynuując opowieść o mrocznej, miejskiej nocy, artysta śpiewa: „Moje najmroczniejsze godziny / Dziewczyno, czuję się bardzo samotny w tym zatłoczonym pomieszczeniu / Różne dziewczyny na parkiecie, rozpraszają moje myślenie o tobie / Stałem się tym facetem, którym już kiedyś byłem, byłem / Staram się zasnąć / By być bliżej ciebie w moich snach / Nie chciałem się budzić, dopóki przy mnie nie będziesz / Chciałem, byś po prostu zadzwoniła i powiedziała, powiedziała”.\n\n„After Hours” będzie czwartym długogrającym albumem artysty. Na krążku znajdą się wydane w 2019 hitowe single „Heartless” oraz „Blinding Lights”. Dotychczasową dyskografię The Weekend zamyka multiplatynowy „Starboy” z 2016, a w 2018 ukazała się EP-ka „My Dear Melancholy”.",
+    "trackList" : [
+      {
+        "id" : 0,
+        "trackNumber" : 0,
+        "trackName" : "",
+        "audioFileName" : ""
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 8,
+        "trackNumber" : 8,
+        "trackName" : "O",
+        "audioFileName" : "gs8"
+      }
+    ]
+  },
+  {
+    "id" : 6,
+    "title" : "Everyday Life",
+    "artist" : "Coldplay",
+    "year" : "2019",
+    "price" : "55,99",
+    "mainImageName" : "everyday_life",
+    "description" : "Ósmy album Coldplay’a „Everyday Life” składa się z dwóch części: „Sunrise” i „Sunset”. Krążek został wyprodukowany przez The Dream Team. Gościnnie wystąpili na nim Stromae, Femi Kuti, Tiwa Savage i Jacob Collier. Okładka albumu oparta jest na zdjęciu z 1919 roku zespołu pradziadka gitarzysty Jonny'ego Bucklanda.",
+    "trackList" : [
+      {
+        "id" : 0,
+        "trackNumber" : 0,
+        "trackName" : "",
+        "audioFileName" : ""
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 8,
+        "trackNumber" : 8,
+        "trackName" : "O",
+        "audioFileName" : "gs8"
+      }
+    ]
+  },
+  {
+    "id" : 7,
+    "title" : "everything i wanted - Single",
+    "artist" : "Billie Eilish",
+    "year" : "2018",
+    "price" : "29,99",
+    "mainImageName" : "everything_i_wanted_single",
+    "description" : "",
+    "trackList" : [
+      {
+        "id" : 0,
+        "trackNumber" : 0,
+        "trackName" : "",
+        "audioFileName" : ""
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 8,
+        "trackNumber" : 8,
+        "trackName" : "O",
+        "audioFileName" : "gs8"
+      }
+    ]
+  },
+  {
+    "id" : 8,
+    "title" : "Geniusz",
+    "artist" : "Rasmentalism",
+    "year" : "2020",
+    "price" : "49,99",
+    "mainImageName" : "geniusz",
+    "description" : "Parafrazując klasyka - wszyscy jesteśmy geniuszami. Albo nikt z nas. O tym będzie najnowszy album zespołu Rasmentalism o tym przewrotnym tytule. „Geniusz” to zdecydowanie Rasmentalism a.d. 2020, z jednej  strony bardzo hiphopowy gościnny udział Białasa, a z drugiej Dawid Podsiadło czy Kuba Badach. Ras i Ment XXL przygotowali genialną mieszankę muzyczną.",
+    "trackList" : [
+      {
+        "id" : 0,
+        "trackNumber" : 0,
+        "trackName" : "",
+        "audioFileName" : ""
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 8,
+        "trackNumber" : 8,
+        "trackName" : "O",
+        "audioFileName" : "gs8"
+      }
+    ]
+  },
+  {
+    "id" : 9,
+    "title" : "Małomiasteczkowy",
+    "artist" : "Dawid Podsiadło",
+    "year" : "2018",
+    "price" : "25,99",
+    "mainImageName" : "malomiasteczkowy",
+    "description" : "Stare przysłowie mówi, że ze szczytu wszystkie drogi wiodą w dół. Ale choć jesienią 2016 roku Dawid Podsiadło był na szczycie – z dwiema diamentowymi płytami w dorobku, całym wagonem nagród i wyprzedaną wielką trasą koncertową – ani myślał schodzić. Zrobił więc sobie kilka miesięcy przerwy od sceny, by wymyślić się na nowo.\n\nChoć złota zasada mówi, że w zwycięskiej drużynie nie dokonuje się zmian, Podsiadło zrezygnował tym razem ze współpracy z Bogdanem Kondrackim, producentem jego dotychczasowych nagrań. Zaryzykował, ale powierzył swój los w ręce innego wybitnego fachowca – Bartosz Dziedzic stoi bowiem za sukcesami albumów „Granda” Moniki Brodki i „Składam się z ciągłych powtórzeń” Artura Rojka.\n\nPanowie nie próbowali jednak powtórzyć tamtych rozwiązań, postanowili również zerwać z dotychczasowym, poprockowym charakterem muzyki Dawida.\n- „Na początku naszej współpracy Bartek powiedział, że chciałby zrobić przebojową płytę. Twierdził, że bardziej zaskakujące będzie, jeśli zrobię kilka przyjemnych, chwytliwych piosenek, niż gdybym próbował sił w muzyce alternatywnej. Ja też uznałem zrobienie dobrej popowej płyty za dużo większe wyzwanie i chciałem się z nim zmierzyć” – mówi wokalista.\n\nWydany u progu wakacji singel „Małomiasteczkowy” był dowodem na to, że poszukiwania Dawida i Bartka idą w dobrą stronę. Dynamiczny, taneczny numer – dziś już to wiemy: przebój polskiego lata 2018 – nie mówił jednak wszystkiego o nowym materiale. Całość płyty, której dał tytuł, nie jest bowiem aż tak intensywna, choć dominują na niej wyraziste rytmy i brzmienia syntezatorów, często dość zaskakujące. Partie wokalne są zróżnicowane, ale pełne swobody, słychać, że ich wykonawca bawi się muzyką.\n\nNiespodzianką może być również fakt, że Dawid Podsiadło po raz pierwszy zaśpiewał całą płytę po polsku.\n- „Obiecałem to sobie jakiś czas temu i choć miałem chwile zwątpienia, udało mi się je przezwyciężyć” – przyznaje – „Dziś mogę powiedzieć, że jestem z tych tekstów naprawdę zadowolony”.\n\nNa „Małomiasteczkowym” Podsiadło porusza niełatwe tematy – „od problemów z komunikacją związku, przez ciemne strony sławy po poszukiwanie w sobie siły i odwagi – ale podaje je w błyskotliwej formie i z właściwym sobie specyficznym humorem”.\n\n„Małomiasteczkowy” jest płytą, której nikt się po Dawidzie nie spodziewał, ale wszyscy jej od niego oczekiwali – jeśli bowiem nie on miałby podnieść sobie poprzeczkę jeszcze wyżej, to kto?",
+    "trackList" : [
+      {
+        "id" : 0,
+        "trackNumber" : 0,
+        "trackName" : "",
+        "audioFileName" : ""
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 8,
+        "trackNumber" : 8,
+        "trackName" : "O",
+        "audioFileName" : "gs8"
+      }
+    ]
+  },
+  {
+    "id" : 10,
+    "title" : "Mylo Xyloto",
+    "artist" : "Coldplay",
+    "year" : "2011",
+    "price" : "29,99",
+    "mainImageName" : "mylo_xyloto",
+    "description" : "Piąty studyjny album Coldplay zatytułowany Mylo Xyloto (wymawiane „majlo zajleto”). Producentami płyty są Markus Dravs, Daniel Green i Rik Simpson, a dodatkowe kompozycje i podrasowanie brzmień  to dzieło Briana Eno. Poprzedni album Coldplay Viva La Vida z 2008 roku zdobył pierwszej miejsce w 36. krajach, w tym Wielkiej Brytanii i USA.",
+    "trackList" : [
+      {
+        "id" : 0,
+        "trackNumber" : 0,
+        "trackName" : "",
+        "audioFileName" : ""
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 8,
+        "trackNumber" : 8,
+        "trackName" : "O",
+        "audioFileName" : "gs8"
+      }
+    ]
+  },
+  {
+    "id" : 11,
+    "title" : "Night Visions (Deluxe)",
+    "artist" : "Imagine Dragons",
+    "year" : "2012",
+    "price" : "29,99",
+    "mainImageName" : "night_visions_deluxe",
+    "description" : "Imagine Dragons to amerykańska kapela rockowa która powstała w Las Vegas w 2008 roku. Mają na koncie kontrakt z Interscope Records, kilka EP, ale przede wszystkim rewelacyjny, debiutancki album „Night Visions”, za którego sprawą odnieśli spektakularny sukces niemal na całym świecie (m.in. 3,5 miliona sprzedanych płyt, #1 na Billboard Chart).\n\nNa fali tego sukcesu i w oczekiwaniu na drugi album, Imagine Dragons przygotowali dla swoich fanów specjalną edycję albumu „Night Visions” – wersję deluxe poszerzoną o 7 dodatkowych utworów!",
+    "trackList" : [
+      {
+        "id" : 0,
+        "trackNumber" : 0,
+        "trackName" : "",
+        "audioFileName" : ""
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 8,
+        "trackNumber" : 8,
+        "trackName" : "O",
+        "audioFileName" : "gs8"
+      }
+    ]
+  },
+  {
+    "id" : 12,
+    "title" : "POCZTÓWKA Z WWA, LATO '19",
+    "artist" : "Taco Hemingway",
+    "year" : "2019",
+    "price" : "39,99",
+    "mainImageName" : "pocztowka_z_wwa",
+    "description" : "„To wszystko dziełem przypadku”…\n\n„Jeszcze na początku maja pisałem zupełnie inną płytę. Obiecałem sobie, że tym razem dam sobie tyle czasu, ile będzie trzeba. Zapowiedziana na rok 2019 przerwa wydawnicza miała być więc wymogiem logistycznym. Okazało się jednak, że jestem uzależniony od wydawania nowego materiału w lato. Cóż począć. I tak właśnie powstała „Pocztówka”. Po roku 2018, erze silnego skupiania się na sobie („SOMA” + „Café Belga” + „Flagey”), czas wymienić lustro na teleskop i wrócić do obserwowania miasta i społeczeństwa. Żeby jednak zadowolić ten segment słuchaczy, który lubi posłuchać sobie moich mniej lub bardziej zrytmizowanych neurotyzmów, postanowiłem dać im upust w stuwersowych „Kabrioletach” zamykających standardową wersję płyty. Pierwszy raz w życiu w swoich działaniach solowych zdecydowałem się zaprosić na płytę kilku gości, i to dość zróżnicowanych pod kątem muzycznym i osobowościowym.\n\nJako że nic mnie tak nie mierzi jak mitologizacja poetów, muzyków i artystów, powiem to najprościej jak się da: przed tobą znajduje się seria dźwięków i garść obserwacji. Tylko i aż tyle.\n\nNie jest to rozprawka ani reportaż. Nie jest to esej ani epopeja. Nie jest to manifest, memoir ani moralitet. Jest to pocztówka. Oto kilka opowieści z Warszawy. Ode mnie, dla was. Niechaj umili wam to kolejne burzliwe lato” – mówi artysta.",
+    "trackList" : [
+      {
+        "id" : 0,
+        "trackNumber" : 0,
+        "trackName" : "",
+        "audioFileName" : ""
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 8,
+        "trackNumber" : 8,
+        "trackName" : "O",
+        "audioFileName" : "gs8"
+      }
+    ]
+  },
+  {
+    "id" : 13,
+    "title" : "Trench",
+    "artist" : "twenty one pilots",
+    "year" : "2018",
+    "price" : "35,99",
+    "mainImageName" : "trench",
+    "description" : "„Trench” to najnowsza płyta Twenty One Pilots, następca wydanej w 2015 roku „Blurryface”.\n\nPoprzedni krążek grupy stał się pierwszym w historii albumem z którego wszystkie utwory pokryły się co najmniej złotem.\n\nNowe utwory od Josha i Tylera to mieszanka indie rocka, hip-hopu, punka i popowych melodii. Album promuje potrójny singiel „Jumpsuit”, Nico & The Niners” oraz „Levitate”.",
+    "trackList" : [
+      {
+        "id" : 0,
+        "trackNumber" : 0,
+        "trackName" : "",
+        "audioFileName" : ""
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 8,
+        "trackNumber" : 8,
+        "trackName" : "O",
+        "audioFileName" : "gs8"
+      }
+    ]
+  },
+  {
+    "id" : 14,
+    "title" : "Youniverse",
+    "artist" : "Tee Lopes",
+    "year" : "2018",
+    "price" : "19,99",
+    "mainImageName" : "youniverse",
+    "description" : "",
+    "trackList" : [
+      {
+        "id" : 0,
+        "trackNumber" : 0,
+        "trackName" : "",
+        "audioFileName" : ""
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 8,
+        "trackNumber" : 8,
+        "trackName" : "O",
+        "audioFileName" : "gs8"
+      }
+    ]
+  },
+  {
+    "id" : 15,
+    "title" : "Znikam Na Chwilę",
+    "artist" : "Linia Nocna",
+    "year" : "2018",
+    "price" : "29,99",
+    "mainImageName" : "znikam_na_chwile",
+    "description" : "Linia Nocna to duet, który tworzą Monika Mimi Wydrzyńska i Mikołaj Trybulec.\n\nDebiutowali w czerwcu 2017 roku singlem „Znikam na chwilę”, za który otrzymali nagrodę redakcji Chillizet w plebiscycie na „Chilloutowy utwór roku 2017”.\n\nIch debiutancki album charakteryzują elektroniczne brzmienia i nowoczesne produkcje, a w warstwie wokalno-tekstowej nie brakuje w nim delikatności i poetyckości.\n\nW nagraniach gościnnie wzięli udział Kuba Sienkiewicz oraz Buslav.",
+    "trackList" : [
+      {
+        "id" : 0,
+        "trackNumber" : 0,
+        "trackName" : "",
+        "audioFileName" : ""
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 1,
+        "trackNumber" : 1,
+        "trackName" : "Always In My Head",
+        "audioFileName" : "gs1"
+      },
+      {
+        "id" : 8,
+        "trackNumber" : 8,
+        "trackName" : "O",
+        "audioFileName" : "gs8"
+      }
+    ]
+  }
 ]
