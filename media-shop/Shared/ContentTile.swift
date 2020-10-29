@@ -29,6 +29,7 @@ struct ContentTile: View {
                         Text(extraInfo)
                             .font(.subheadline)
                             .foregroundColor(Color.black)
+                            .lineLimit(1)
                     }
                     Spacer()
                     VStack(alignment: .leading){
@@ -43,9 +44,9 @@ struct ContentTile: View {
     
     func getDestination(from navItem: Content) -> AnyView {
         if navItem is Music {
-            return AnyView(MusicDetails())
+            return AnyView(MusicDetails(musicItem: navItem as! Music))
         } else {
-            return AnyView(MusicDetails())
+            return AnyView(MusicDetails(musicItem: navItem as! Music))
         }
     }
 }

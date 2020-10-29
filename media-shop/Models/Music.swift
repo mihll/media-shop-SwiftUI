@@ -7,4 +7,5 @@ struct Music: Hashable, Codable, Identifiable, Content {
     var mainImageName: String
     var artist: String
     var year: String
+    var description: String
 }

@@ -11,40 +11,9 @@ struct MusicTab: View {
     var body: some View {
         NavigationView {
             ScrollView() {
-                NavigationLink(destination: NewMusic()){
-                    HStack() {
-                        Text("Nowe")
-                            .font(.title)
-                            .padding(.leading)
-                        Image(systemName: "chevron.right")
-                            .imageScale(.large)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                ScrollView(.horizontal) {
-                    HStack() {
-                        ForEach(musicData) { music in
-                            ContentTile(extraInfo: music.artist, content: music)
-                        }
-                    }
-                }
-                NavigationLink(destination: BestMusic()){
-                    HStack() {
-                        Text("Bestsellery")
-                            .font(.title)
-                            .padding(.leading)
-                        Image(systemName: "chevron.right")
-                            .imageScale(.large)
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                ScrollView(.horizontal) {
-                    HStack() {
-                        ForEach(bestMusicData) { music in
-                            ContentTile(extraInfo: music.artist, content: music)
-                        }
-                    }
-                }
+                MusicCarousel(carouselTitle: "Nowe", carouselData: getNewMusicData())
+                MusicCarousel(carouselTitle: "Bestsellery", carouselData: getBestMusicData())
+                MusicCarousel(carouselTitle: "Polecane", carouselData: getRecommendedMusicData())
             }.navigationBarTitle("Muzyka")
             .navigationBarItems(trailing:
                                     NavigationLink(destination: CartView()){
@@ -53,6 +22,16 @@ struct MusicTab: View {
                                     }
             )
         }
+    }
+    
+    func getNewMusicData() -> [Music] {
+        return Array(musicData[0...4])
+    }
+    func getBestMusicData() -> [Music] {
+        return Array(musicData[5...9])
+    }
+    func getRecommendedMusicData() -> [Music] {
+        return Array(musicData[10...14])
     }
 }
 
