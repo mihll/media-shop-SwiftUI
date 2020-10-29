@@ -58,16 +58,8 @@ struct MusicDetails: View {
                             }
                         )
                 }
+                TrackList(tracks: musicItem.trackList)
                 
-                Text("Lista utworów")
-                    .font(.title)
-                    .padding(.top)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                Text("Dane szczegółowe")
-                    .font(.title)
-                    .padding(.top)
-                    .frame(maxWidth: .infinity, alignment: .leading)
             }.padding([.leading, .bottom, .trailing])
         }.navigationBarTitle(musicItem.title, displayMode: .inline)
         .navigationBarItems(trailing:
