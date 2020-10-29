@@ -35,34 +35,40 @@ struct MusicDetails: View {
                 }
             }.padding(.horizontal)
             VStack(alignment: .leading){
-                Text("Opis")
-                    .font(.title)
-                Text(musicItem.description)
-                    .animation(.easeInOut)
-                    .lineLimit(isExpanded ? nil : 3)
-                                .overlay(
-                                    GeometryReader { proxy in
-                                        Button(action: {
-                                            isExpanded.toggle()
-                                        }) {
-                                            Text(isExpanded ? "...mniej" : "...więcej")
-                                                .font(.caption).bold()
-                                                .padding(.leading, 8.0)
-                                                .padding(.top, 4.0)
-                                                .background(Color.white)
-                                        }
-                                        .frame(width: proxy.size.width, height: proxy.size.height, alignment: .bottomTrailing)
-                                    }
-                                )
+                if musicItem.description != "" {
+                    Text("Opis")
+                        .font(.title)
+                        .padding(.top)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Text(musicItem.description)
+                        .animation(.easeInOut)
+                        .lineLimit(isExpanded ? nil : 3)
+                        .overlay(
+                            GeometryReader { proxy in
+                                Button(action: {
+                                    isExpanded.toggle()
+                                }) {
+                                    Text(isExpanded ? "...mniej" : "...więcej")
+                                        .font(.caption).bold()
+                                        .padding(.leading, 8.0)
+                                        .padding(.top, 4.0)
+                                        .background(Color.white)
+                                }
+                                .frame(width: proxy.size.width, height: proxy.size.height, alignment: .bottomTrailing)
+                            }
+                        )
+                }
                 
                 Text("Lista utworów")
                     .font(.title)
                     .padding(.top)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 
                 Text("Dane szczegółowe")
                     .font(.title)
                     .padding(.top)
-            }.padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }.padding([.leading, .bottom, .trailing])
         }.navigationBarTitle(musicItem.title, displayMode: .inline)
         .navigationBarItems(trailing:
                                 NavigationLink(destination: CartView()){
