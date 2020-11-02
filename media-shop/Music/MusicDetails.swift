@@ -40,6 +40,7 @@ struct MusicDetails: View {
                 if !musicItem.trackList.isEmpty {
                     TrackList(tracks: musicItem.trackList)
                 }
+                DetailsTable(item: musicItem)
             }.padding([.leading, .bottom, .trailing])
         }.navigationBarTitle(musicItem.title, displayMode: .inline)
         .navigationBarItems(trailing:
@@ -58,6 +59,5 @@ struct MusicDetails_Previews: PreviewProvider {
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }
-        .preferredColorScheme(.dark)
     }
 }
