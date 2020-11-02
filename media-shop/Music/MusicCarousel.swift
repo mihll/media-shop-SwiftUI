@@ -12,20 +12,22 @@ struct MusicCarousel: View {
     var carouselData: [Music]
     
     var body: some View {
-        NavigationLink(destination: ContentList()){
-            HStack() {
-                Text(carouselTitle)
-                    .font(.title)
-                    .padding(.leading)
-                Image(systemName: "chevron.right")
-                    .imageScale(.large)
+        VStack(){
+            NavigationLink(destination: ContentList()){
+                HStack() {
+                    Text(carouselTitle)
+                        .font(.title)
+                        .padding(.leading)
+                    Image(systemName: "chevron.right")
+                        .imageScale(.large)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        ScrollView(.horizontal) {
-            HStack() {
-                ForEach(carouselData) { music in
-                    ContentTile(extraInfo: music.artist, content: music)
+            ScrollView(.horizontal) {
+                HStack() {
+                    ForEach(carouselData) { music in
+                        ContentTile(extraInfo: music.artist, content: music)
+                    }
                 }
             }
         }

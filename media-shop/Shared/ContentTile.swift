@@ -12,34 +12,31 @@ struct ContentTile: View {
     var content: Content
     
     var body: some View {
-        NavigationLink(destination: getDestination(from: content)) {
-            VStack(alignment: .center) {
+        VStack(alignment: .center) {
+            NavigationLink(destination: getDestination(from: content)) {
                 content.mainImage
                     .resizable()
                     .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                     .scaledToFit()
                     .frame(maxHeight: 200)
-                
-                HStack() {
-                    VStack(alignment: .leading){
-                        Text(content.title)
-                            .font(.headline)
-                            .foregroundColor(Color.black)
-                            .lineLimit(1)
-                        Text(extraInfo)
-                            .font(.subheadline)
-                            .foregroundColor(Color.black)
-                            .lineLimit(1)
-                    }
-                    Spacer()
-                    VStack(alignment: .leading){
-                        Text(content.price + " zł")
-                            .foregroundColor(Color.black)
-                    }
+            }
+            
+            HStack() {
+                VStack(alignment: .leading){
+                    Text(content.title)
+                        .font(.headline)
+                        .lineLimit(1)
+                    Text(extraInfo)
+                        .font(.subheadline)
+                        .lineLimit(1)
+                }
+                Spacer()
+                VStack(alignment: .leading){
+                    Text(content.price + " zł")
                 }
             }
-            .padding([.leading, .bottom])
         }
+        .padding([.leading, .bottom])
     }
     
     func getDestination(from navItem: Content) -> AnyView {

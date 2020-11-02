@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MusicDetails: View {
     var musicItem: Music
-    @State private var isExpanded: Bool = false
     
     var body: some View {
         ScrollView {
@@ -36,30 +35,11 @@ struct MusicDetails: View {
             }.padding(.horizontal)
             VStack(alignment: .leading){
                 if musicItem.description != "" {
-                    Text("Opis")
-                        .font(.title)
-                        .padding(.top)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text(musicItem.description)
-                        .animation(.easeInOut)
-                        .lineLimit(isExpanded ? nil : 3)
-                        .overlay(
-                            GeometryReader { proxy in
-                                Button(action: {
-                                    isExpanded.toggle()
-                                }) {
-                                    Text(isExpanded ? "...mniej" : "...więcej")
-                                        .font(.caption).bold()
-                                        .padding(.leading, 8.0)
-                                        .padding(.top, 4.0)
-                                        .background(Color.white)
-                                }
-                                .frame(width: proxy.size.width, height: proxy.size.height, alignment: .bottomTrailing)
-                            }
-                        )
+                    DescriptionView(descriptionText: musicItem.description)
                 }
-                TrackList(tracks: musicItem.trackList)
-                
+                if !musicItem.trackList.isEmpty {
+                    TrackList(tracks: musicItem.trackList)
+                }
             }.padding([.leading, .bottom, .trailing])
         }.navigationBarTitle(musicItem.title, displayMode: .inline)
         .navigationBarItems(trailing:
@@ -78,5 +58,6 @@ struct MusicDetails_Previews: PreviewProvider {
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }
+        .preferredColorScheme(.dark)
     }
 }
