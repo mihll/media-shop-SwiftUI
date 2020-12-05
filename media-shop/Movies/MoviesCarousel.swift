@@ -1,15 +1,15 @@
 //
-//  MusicCarousel.swift
+//  MoviesCarousel.swift
 //  media-shop
 //
-//  Created by Michał Kierzkowski on 29/10/2020.
+//  Created by Michał Kierzkowski on 18/11/2020.
 //
 
 import SwiftUI
 
-struct MusicCarousel: View {
+struct MoviesCarousel: View {
     var carouselTitle: String
-    var carouselData: [Music]
+    var carouselData: [Movie]
     var carouselType: ProductType
     var carouselListType: ProductListType
     
@@ -27,8 +27,8 @@ struct MusicCarousel: View {
             }
             ScrollView(.horizontal) {
                 HStack() {
-                    ForEach(carouselData) { music in
-                        ProductTile(extraInfo: music.artist, product: music)
+                    ForEach(carouselData) { movie in
+                        ProductTile(extraInfo: movie.director, product: movie)
                     }
                 }
             }
@@ -36,8 +36,8 @@ struct MusicCarousel: View {
     }
 }
 
-struct MusicCarousel_Previews: PreviewProvider {
+struct MoviesCarousel_Previews: PreviewProvider {
     static var previews: some View {
-        MusicCarousel(carouselTitle: "Test", carouselData: musicData, carouselType: ProductType.music, carouselListType: ProductListType.new)
+        MoviesCarousel(carouselTitle: "Nowe", carouselData: movieData, carouselType: ProductType.movie, carouselListType: ProductListType.new)
     }
 }

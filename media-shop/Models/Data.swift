@@ -3,8 +3,7 @@ import SwiftUI
 import CoreLocation
 
 let musicData: [Music] = load("musicData.json")
-let bestMusicData: [Music] = load("bestMusicData.json")
-
+let movieData: [Movie] = load("movieData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

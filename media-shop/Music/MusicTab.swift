@@ -8,19 +8,31 @@
 import SwiftUI
 
 struct MusicTab: View {
+    @State var showSheetView = false
+    @EnvironmentObject var cartItems: CartItems
+    
     var body: some View {
         NavigationView {
             ScrollView() {
-                MusicCarousel(carouselTitle: "Nowe", carouselData: getNewMusicData())
-                MusicCarousel(carouselTitle: "Bestsellery", carouselData: getBestMusicData())
-                MusicCarousel(carouselTitle: "Polecane", carouselData: getRecommendedMusicData())
+                MusicCarousel(carouselTitle: "Nowe", carouselData: getNewMusicData(), carouselType: ProductType.music, carouselListType: .new)
+                MusicCarousel(carouselTitle: "Bestsellery", carouselData: getBestMusicData(), carouselType: ProductType.music, carouselListType: .best)
+                MusicCarousel(carouselTitle: "Polecane", carouselData: getRecommendedMusicData(), carouselType: ProductType.music, carouselListType: .recommended)
             }.navigationBarTitle("Muzyka")
             .navigationBarItems(trailing:
-                                    NavigationLink(destination: CartView()){
+                                    Button(action: {
+                                        self.showSheetView.toggle()
+                                    }){
+                                        if cartItems.items.isEmpty{
                                             Text("Koszyk")
                                             Image(systemName: "cart").imageScale(.large)
+                                        } else {
+                                            Text("Koszyk (\(cartItems.items.count))" )
+                                            Image(systemName: "cart.fill").imageScale(.large)
+                                        }
                                     }
             )
+        }.sheet(isPresented: $showSheetView) {
+            CartView(showSheetView: self.$showSheetView)
         }
     }
     

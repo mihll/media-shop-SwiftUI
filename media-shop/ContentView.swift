@@ -9,54 +9,40 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection = 0
-
+    var cartItems = CartItems()
     var body: some View {
         TabView(selection: $selection){
             MusicTab()
                 .tabItem {
-                    VStack {
-                        Image(systemName: "music.note")
-                        Text("Muzyka")
-                    }
+                Label("Muzyka", systemImage: "music.note")
             }
             .tag(0)
             
             MoviesTab()
                 .tabItem {
-                    VStack {
-                        Image(systemName: "film")
-                        Text("Filmy")
-                    }
+                    Label("Filmy", systemImage: "film")
             }
             .tag(1)
             
             BooksTab()
                 .tabItem {
-                    VStack {
-                        Image(systemName: "books.vertical")
-                        Text("Książki")
-                    }
+                    Label("Książki", systemImage: "books.vertical")
             }
             .tag(2)
             
             SearchTab()
                 .tabItem {
-                    VStack {
-                        Image(systemName: "magnifyingglass")
-                        Text("Szukaj")
-                    }
+                    Label("Szukaj", systemImage: "magnifyingglass")
             }
             .tag(3)
             
             ProfileTab()
                 .tabItem {
-                    VStack {
-                        Image(systemName: "person")
-                        Text("Profil")
-                    }
+                    Label("Profil", systemImage: "person")
             }
             .tag(4)
-        }.navigationViewStyle(StackNavigationViewStyle())
+        }.environmentObject(cartItems)
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
@@ -67,7 +53,5 @@ struct ContentView_Previews: PreviewProvider {
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }
-        .preferredColorScheme(.dark)
-        
     }
 }

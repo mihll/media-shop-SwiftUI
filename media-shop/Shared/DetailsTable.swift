@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DetailsTable: View {
-    var item : Content
+    var item : Product
     var body: some View {
         Text("Dane szczegółowe")
             .font(.title)
@@ -21,7 +21,7 @@ struct DetailsTable: View {
         }
     }
     
-    func getDetails(from detailsItem: Content) -> [Detail] {
+    func getDetails(from detailsItem: Product) -> [Detail] {
         if detailsItem is Music {
             var detailsArray = [Detail]()
             let detailMusic = detailsItem as! Music
@@ -38,11 +38,30 @@ struct DetailsTable: View {
                 detailsArray.append(Detail(id: 10, header: "Wymiary w opakowaniu [mm]:", data: detailMusic.caseSize))
             }
             return detailsArray
+        } else if detailsItem is Movie {
+            var detailsArray = [Detail]()
+            let detailMovie = detailsItem as! Movie
+            detailsArray.append(Detail(id: 1, header: "Tytuł:", data: detailMovie.title))
+            detailsArray.append(Detail(id: 2, header: "Reżyser:", data: detailMovie.director))
+            detailsArray.append(Detail(id: 3, header: "Aktorzy:", data: detailMovie.actors.joined(separator: ", ")))
+            detailsArray.append(Detail(id: 4, header: "Czas trwania:", data: detailMovie.durationTime))
+            detailsArray.append(Detail(id: 5, header: "Język oryginału:", data: detailMovie.originalLanguage))
+            detailsArray.append(Detail(id: 6, header: "Lektor:", data: detailMovie.narrator ? "Tak" : "Nie"))
+            if detailMovie.narrator {
+                detailsArray.append(Detail(id: 7, header: "Języki lektora:", data: detailMovie.narratorLanguages.joined(separator: ", ")))
+            }
+            detailsArray.append(Detail(id: 8, header: "Polski dubbing:", data: detailMovie.polishDub ? "Tak" : "Nie"))
+            detailsArray.append(Detail(id: 9, header: "Języki napisów:", data: detailMovie.subLanguages.joined(separator: ", ")))
+            detailsArray.append(Detail(id: 10, header: "Dystrybutor:", data: detailMovie.distributor))
+            detailsArray.append(Detail(id: 11, header: "Producent:", data: detailMovie.producer))
+            detailsArray.append(Detail(id: 12, header: "Data premiery:", data: detailMovie.premiereDate))
+            detailsArray.append(Detail(id: 13, header: "Nośnik:", data: detailMovie.storageMedia))
+            detailsArray.append(Detail(id: 14, header: "Liczba nośników:", data: detailMovie.storageAmount))
+            return detailsArray
         } else {
             return []
         }
     }
-    
 }
 
 struct DetailsTable_Previews: PreviewProvider {

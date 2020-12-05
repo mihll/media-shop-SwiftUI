@@ -1,9 +1,9 @@
 import SwiftUI
 
-struct Music: Hashable, Codable, Identifiable, Content {
+struct Music: Hashable, Codable, Identifiable, Product {
     var id: Int
     var title: String
-    var price: String
+    var price: Double
     var mainImageName: String
     var distributor : String
     var premiereDate : String

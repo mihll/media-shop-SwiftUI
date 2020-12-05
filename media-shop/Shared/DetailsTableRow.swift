@@ -24,6 +24,7 @@ struct DetailsTableRow: View {
                 .frame(width: geometry.size.width/3)
                 Divider()
                 Text(data)
+                    .minimumScaleFactor(0.5)
             }
         }
         .frame(minHeight: 50)

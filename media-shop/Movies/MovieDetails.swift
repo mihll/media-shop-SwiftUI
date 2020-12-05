@@ -1,53 +1,53 @@
 //
-//  MusicDetails.swift
+//  MovieDetails.swift
 //  media-shop
 //
-//  Created by Michał Kierzkowski on 22/10/2020.
+//  Created by Michał Kierzkowski on 18/11/2020.
 //
 
 import SwiftUI
 
-struct MusicDetails: View {
-    var musicItem: Music
+struct MovieDetails: View {
+    var movieItem: Movie
     @State var showSheetView = false
     @State private var showingAlert = false
     @EnvironmentObject var cartItems: CartItems
     var body: some View {
         ScrollView {
-            musicItem.mainImage
+            movieItem.mainImage
                 .resizable()
                 .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                 .scaledToFit()
-                .frame(maxWidth: 400)
+                .frame(maxWidth: 400, maxHeight: 400)
                 .padding()
             HStack() {
                 VStack(alignment: .leading){
-                    Text(musicItem.title)
+                    Text(movieItem.title)
                         .font(.title)
-                    Text(musicItem.artist)
+                    Text(movieItem.director)
                         .font(.title2)
                 }
                 Spacer()
                 HStack(){
                     Button(action: {
-                        addItemToCart(itemToAdd: musicItem)
+                        addItemToCart(itemToAdd: movieItem)
                     }) {
-                        Text(String(format: "%.2f zł", musicItem.price))
+                        Text(String(format: "%.2f zł", movieItem.price))
                             .font(.headline)
                         Image(systemName: "cart.badge.plus").imageScale(.large)
                     }
                 }
             }.padding(.horizontal)
             VStack(alignment: .leading){
-                if musicItem.description != "" {
-                    DescriptionView(descriptionText: musicItem.description)
+                if movieItem.description != "" {
+                    DescriptionView(descriptionText: movieItem.description)
                 }
-                if !musicItem.trackList.isEmpty {
-                    TrackList(tracks: musicItem.trackList)
+                if movieItem.trailerFileName != "" {
+                    TrailerView(trailerFileName: movieItem.trailerFileName)
                 }
-                DetailsTable(item: musicItem)
+                DetailsTable(item: movieItem)
             }.padding([.leading, .bottom, .trailing])
-        }.navigationBarTitle(musicItem.title, displayMode: .inline)
+        }.navigationBarTitle(movieItem.title, displayMode: .inline)
         .navigationBarItems(trailing:
                                 Button(action: {
                                     self.showSheetView.toggle()
@@ -70,28 +70,24 @@ struct MusicDetails: View {
         
     }
     
-    func addItemToCart (itemToAdd: Music) {
+    func addItemToCart (itemToAdd: Movie) {
         if self.cartItems.items.contains(where: {item in item.id == itemToAdd.id }) {
             self.showingAlert = true
         } else {
             let item = CartItem()
-            item.id = musicItem.id
-            item.title = musicItem.title
-            item.extraText = musicItem.artist
-            item.price = musicItem.price
-            item.mainImageName = musicItem.mainImageName
+            item.id = movieItem.id
+            item.title = movieItem.title
+            item.extraText = movieItem.director
+            item.price = movieItem.price
+            item.mainImageName = movieItem.mainImageName
             item.amount = 1
             self.cartItems.items.append(item)
         }
     }
 }
 
-struct MusicDetails_Previews: PreviewProvider {
+struct MovieDetails_Previews: PreviewProvider {
     static var previews: some View {
-        ForEach(["iPhone SE (1st generation)","iPhone 12","iPad Air (4th generation)"], id: \.self) { deviceName in
-            MusicDetails(musicItem: musicData[0])
-                .previewDevice(PreviewDevice(rawValue: deviceName))
-                .previewDisplayName(deviceName)
-        }
+        MovieDetails(movieItem: movieData[0])
     }
 }

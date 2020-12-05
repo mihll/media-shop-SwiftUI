@@ -1,5 +1,5 @@
 //
-//  ContentTile.swift
+//  ProductTile.swift
 //  media-shop
 //
 //  Created by Michał Kierzkowski on 27/10/2020.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct ContentTile: View {
+struct ProductTile: View {
     var extraInfo: String
-    var content: Content
+    var product: Product
     
     var body: some View {
         VStack(alignment: .center) {
-            NavigationLink(destination: getDestination(from: content)) {
-                content.mainImage
+            NavigationLink(destination: getDestination(from: product)) {
+                product.mainImage
                     .resizable()
                     .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
                     .scaledToFit()
@@ -23,7 +23,7 @@ struct ContentTile: View {
             
             HStack() {
                 VStack(alignment: .leading){
-                    Text(content.title)
+                    Text(product.title)
                         .font(.headline)
                         .lineLimit(1)
                     Text(extraInfo)
@@ -32,24 +32,26 @@ struct ContentTile: View {
                 }
                 Spacer()
                 VStack(alignment: .leading){
-                    Text(content.price + " zł")
+                    Text(String(format: "%.2f zł", product.price))
                 }
             }
         }
         .padding([.leading, .bottom])
     }
     
-    func getDestination(from navItem: Content) -> AnyView {
+    func getDestination(from navItem: Product) -> AnyView {
         if navItem is Music {
             return AnyView(MusicDetails(musicItem: navItem as! Music))
+        } else if navItem is Movie {
+            return AnyView(MovieDetails(movieItem: navItem as! Movie))
         } else {
-            return AnyView(MusicDetails(musicItem: navItem as! Music))
+            return AnyView(MovieDetails(movieItem: navItem as! Movie))
         }
     }
 }
 
-struct ContentTile_Previews: PreviewProvider {
+struct ProductTile_Previews: PreviewProvider {
     static var previews: some View {
-        ContentTile(extraInfo: musicData[0].artist, content: musicData[0])
+        ProductTile(extraInfo: musicData[0].artist, product: musicData[0])
     }
 }
