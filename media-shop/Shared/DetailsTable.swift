@@ -59,7 +59,21 @@ struct DetailsTable: View {
             detailsArray.append(Detail(id: 14, header: "Liczba nośników:", data: detailMovie.storageAmount))
             return detailsArray
         } else {
-            return []
+            var detailsArray = [Detail]()
+            let detailBook = detailsItem as! Book
+            detailsArray.append(Detail(id:1, header: "Tytuł:", data: detailBook.title))
+            detailsArray.append(Detail(id:2, header: "Autor:", data: detailBook.author))
+            if detailBook.translator != "" {
+                detailsArray.append(Detail(id:3, header: "Tłumacz:", data: detailBook.translator))
+            }
+            detailsArray.append(Detail(id:4, header: "Wydawnictwo:", data: detailBook.publisher))
+            detailsArray.append(Detail(id:5, header: "Język wydania:", data: detailBook.issueLanguage))
+            detailsArray.append(Detail(id:6, header: "Język oryginału:", data: detailBook.originalLanguage))
+            if detailBook.pagesAmount != "" {
+                detailsArray.append(Detail(id:8, header: "Numer wydania:", data: detailBook.issueNumber))
+            }
+            detailsArray.append(Detail(id:9, header: "Data premiery:", data: detailBook.premiereDate))
+            return detailsArray
         }
     }
 }

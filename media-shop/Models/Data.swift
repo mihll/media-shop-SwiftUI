@@ -4,6 +4,7 @@ import CoreLocation
 
 let musicData: [Music] = load("musicData.json")
 let movieData: [Movie] = load("movieData.json")
+let bookData: [Book] = load("bookData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchTab: View {
     @State var showSheetView = false
-    @EnvironmentObject var cartItems: CartItems
+    @EnvironmentObject var cart: Cart
     
     @State private var searchText = ""
     @State private var showCancelButton: Bool = false
@@ -44,8 +44,10 @@ struct SearchTab: View {
                     ForEach(getAllProducts().filter{$0.title.hasPrefix(searchText) || searchText == ""}, id: \.id) {
                         product in if product is Music {
                             MusicListRow(musicItem: product as! Music)
-                        } else {
+                        } else if product is Movie {
                             MoviesListRow(movieItem: product as! Movie)
+                        } else {
+                            BooksListRow(bookItem: product as! Book)
                         }
                     }
                 }
@@ -54,11 +56,11 @@ struct SearchTab: View {
                                         Button(action: {
                                             self.showSheetView.toggle()
                                         }){
-                                            if cartItems.items.isEmpty{
+                                            if cart.items.isEmpty{
                                                 Text("Koszyk")
                                                 Image(systemName: "cart").imageScale(.large)
                                             } else {
-                                                Text("Koszyk (\(cartItems.items.count))" )
+                                                Text("Koszyk (\(cart.items.count))" )
                                                 Image(systemName: "cart.fill").imageScale(.large)
                                             }
                                         }
@@ -71,7 +73,7 @@ struct SearchTab: View {
     }
     
     func getAllProducts() -> [Product] {
-        return Array(musicData as [Product] + movieData as [Product]).shuffled()
+        return Array(musicData as [Product] + movieData as [Product] + bookData as [Product]).shuffled()
     }
 }
 

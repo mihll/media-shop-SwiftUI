@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var selection = 0
-    var cartItems = CartItems()
+    var cart = Cart()
     var body: some View {
         TabView(selection: $selection){
             MusicTab()
@@ -41,7 +41,7 @@ struct ContentView: View {
                     Label("Profil", systemImage: "person")
             }
             .tag(4)
-        }.environmentObject(cartItems)
+        }.environmentObject(cart)
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }

@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import CoreMotion
+
 
 struct ProductTile: View {
     var extraInfo: String
@@ -36,6 +38,7 @@ struct ProductTile: View {
                 }
             }
         }
+        .frame(maxWidth: 200)
         .padding([.leading, .bottom])
     }
     
@@ -45,7 +48,7 @@ struct ProductTile: View {
         } else if navItem is Movie {
             return AnyView(MovieDetails(movieItem: navItem as! Movie))
         } else {
-            return AnyView(MovieDetails(movieItem: navItem as! Movie))
+            return AnyView(BookDetails(bookItem: navItem as! Book))
         }
     }
 }

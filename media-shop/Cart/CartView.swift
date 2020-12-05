@@ -9,26 +9,31 @@ import SwiftUI
 
 struct CartView: View {
     @Binding var showSheetView: Bool
-    @EnvironmentObject var cartItems: CartItems
+    @EnvironmentObject var cart: Cart
     
-    @State var deliveryName: String = ""
-    @State var deliveryAddress: String = ""
-    @State var deliveryPostcode: String = ""
-    @State var deliveryCity: String = ""
-    @State var deliveryIndex = 0
-    @State var billingSameAddress = true
-    @State var billingName: String = ""
-    @State var billingAddress: String = ""
-    @State var billingPostcode: String = ""
-    @State var billingCity: String = ""
-    @State var billingInvoice = false
-    @State var billingNIP: String = ""
-    var deliveryOptions = ["Poczta Polska (15.00 zł)", "Kurier DPD (20.00 zł)", "Kurier UPS (25.00 zł)"]
-    var deliveryPrices = [15.00, 20.00, 25.00]
+    var shippingValid: Bool {
+        cart.deliveryName != "" && cart.deliveryAddress != "" && cart.deliveryPostcode != "" && cart.deliveryCity != ""
+    }
+    
+    var billingValid: Bool {
+        if(!cart.billingSameAddress){
+            return cart.billingName != "" && cart.billingAddress != "" && cart.billingPostcode != "" && cart.billingCity != ""
+        } else {
+            return true
+        }
+    }
+    
+    var invoiceValid: Bool {
+        if(cart.billingInvoice){
+            return cart.billingNIP != ""
+        } else {
+            return true
+        }
+    }
     
     var body: some View {
         NavigationView {
-            if cartItems.items.isEmpty {
+            if cart.items.isEmpty {
                 VStack(alignment: .center){
                     Image(systemName: "cart")
                         .font(.system(size: 150))
@@ -45,50 +50,60 @@ struct CartView: View {
             } else {
                 Form(){
                     Section(header: Text("ZAWARTOŚĆ KOSZYKA")) {
-                        ForEach(cartItems.items) { cartItem in
+                        ForEach(cart.items) { cartItem in
                             CartItemRow(cartItem: cartItem)
                         }
                         .onDelete(perform: { indexSet in
-                            cartItems.items.remove(atOffsets: indexSet)
+                            cart.items.remove(atOffsets: indexSet)
                         })
                     }
                     Section(header: Text("DOSTAWA")) {
-                        Picker(selection: $deliveryIndex, label: Text("Metoda dostawy")) {
-                            ForEach(0 ..< deliveryOptions.count) {
-                                Text(self.deliveryOptions[$0])
+                        Picker(selection: $cart.deliveryIndex, label: Text("Metoda dostawy")) {
+                            ForEach(0 ..< cart.deliveryOptions.count) {
+                                Text(cart.deliveryOptions[$0])
                             }
                         }
-                        TextField("Imię i nazwisko/Nazwa firmy", text: $deliveryName)
-                        TextField("Adres", text: $deliveryAddress)
-                        TextField("Kod pocztowy", text: $deliveryPostcode)
-                        TextField("Miasto", text: $deliveryCity)
+                        TextField("Imię i nazwisko/Nazwa firmy", text: $cart.deliveryName)
+                            .modifier(TextFieldClearButton(text: $cart.deliveryName))
+                        TextField("Adres", text: $cart.deliveryAddress)
+                            .modifier(TextFieldClearButton(text: $cart.deliveryAddress))
+                        TextField("Kod pocztowy", text: $cart.deliveryPostcode)
+                            .modifier(TextFieldClearButton(text: $cart.deliveryPostcode))
+                        TextField("Miasto", text: $cart.deliveryCity)
+                            .modifier(TextFieldClearButton(text: $cart.deliveryCity))
                     }
                     
                     Section(header: Text("RACHUNEK/FAKUTRA")) {
-                        Toggle(isOn: $billingSameAddress) {
+                        Toggle(isOn: $cart.billingSameAddress) {
                             Text("Dane jak do wysyłki")
                         }
-                        Toggle(isOn: $billingInvoice) {
+                        Toggle(isOn: $cart.billingInvoice) {
                             Text("Faktura")
                         }
-                        if (billingInvoice) {
-                            TextField("NIP", text: $billingNIP)
+                        if (cart.billingInvoice) {
+                            TextField("NIP", text: $cart.billingNIP)
+                                .modifier(TextFieldClearButton(text: $cart.billingNIP))
                         }
-                        if (!billingSameAddress) {
-                            TextField("Imię i nazwisko/Nazwa firmy", text: $billingName)
-                            TextField("Adres", text: $billingAddress)
-                            TextField("Kod pocztowy", text: $billingPostcode)
-                            TextField("Miasto", text: $billingCity)
+                        if (!cart.billingSameAddress) {
+                            TextField("Imię i nazwisko/Nazwa firmy", text: $cart.billingName)
+                                .modifier(TextFieldClearButton(text: $cart.billingName))
+                            TextField("Adres", text: $cart.billingAddress)
+                                .modifier(TextFieldClearButton(text: $cart.billingAddress))
+                            TextField("Kod pocztowy", text: $cart.billingPostcode)
+                                .modifier(TextFieldClearButton(text: $cart.billingPostcode))
+                            TextField("Miasto", text: $cart.billingCity)
+                                .modifier(TextFieldClearButton(text: $cart.billingCity))
                         }
                     }
                     
                     Section {
-                            NavigationLink(
-                                destination: CartConfirmView(showSheetView: $showSheetView, deliveryName: deliveryName, deliveryAddress: deliveryAddress, deliveryPostcode: deliveryPostcode, deliveryCity: deliveryCity, deliveryIndex: deliveryIndex, billingSameAddress: billingSameAddress, billingName: billingName, billingAddress: billingAddress, billingPostcode: billingPostcode, billingCity: billingCity, billingInvoice: billingInvoice, billingNIP: billingNIP),
-                                label: {
-                                    Text("Podsumowanie")
-                                })
-                    }
+                        NavigationLink(
+                            destination: CartConfirmView(showSheetView: $showSheetView),
+                            label: {
+                                Text("Podsumowanie")
+                                    .fontWeight(.bold)
+                            })
+                    }.disabled(!(shippingValid && billingValid && invoiceValid))
                 }
                 .navigationBarTitle("Koszyk", displayMode: .inline)
                 .navigationBarItems(trailing: Button(action: {
@@ -105,7 +120,7 @@ struct CartView_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(["iPhone SE (1st generation)","iPhone 12","iPad Air (4th generation)"], id: \.self) { deviceName in
             CartView(showSheetView: .constant(true))
-                .environmentObject(CartItems())
+                .environmentObject(Cart())
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }

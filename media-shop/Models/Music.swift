@@ -5,6 +5,7 @@ struct Music: Hashable, Codable, Identifiable, Product {
     var title: String
     var price: Double
     var mainImageName: String
+    var backImageName: String
     var distributor : String
     var premiereDate : String
     var producer : String
@@ -16,4 +17,10 @@ struct Music: Hashable, Codable, Identifiable, Product {
     var year: String
     var description: String
     var trackList: [Track]
+}
+
+extension Music {
+    var backImage: Image {
+        ImageStore.shared.image(name: backImageName)
+    }
 }

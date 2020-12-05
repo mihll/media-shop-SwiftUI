@@ -6,20 +6,43 @@
 //
 
 import SwiftUI
+import CoreMotion
 
 struct MusicDetails: View {
     var musicItem: Music
+    @State var flipped = false
+    @State private var fadeOut = false
     @State var showSheetView = false
     @State private var showingAlert = false
-    @EnvironmentObject var cartItems: CartItems
+    @EnvironmentObject var cart: Cart
     var body: some View {
+        
+        let flipDegrees = flipped ? 180.0 : 0
+        
         ScrollView {
-            musicItem.mainImage
-                .resizable()
-                .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                .scaledToFit()
-                .frame(maxWidth: 400)
-                .padding()
+            ZStack(){
+                musicItem.mainImage
+                    .resizable()
+                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    .scaledToFit()
+                    .frame(maxWidth: 400)
+                    .padding()
+                    .modifier(ParallaxMotionModifier(magnitude: 10))
+                    .flipRotate(flipDegrees).opacity(flipped ? 0.0 : 1.0)
+                musicItem.backImage
+                    .resizable()
+                    .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    .scaledToFit()
+                    .frame(maxWidth: 400)
+                    .padding()
+                    .modifier(ParallaxMotionModifier(magnitude: 10))
+                    .flipRotate(-180 + flipDegrees).opacity(flipped ? 1.0 : 0.0)
+            }
+            .animation(.easeInOut(duration: 0.25))
+            .onTapGesture {
+                self.flipped.toggle()
+            }
+            
             HStack() {
                 VStack(alignment: .leading){
                     Text(musicItem.title)
@@ -52,11 +75,11 @@ struct MusicDetails: View {
                                 Button(action: {
                                     self.showSheetView.toggle()
                                 }){
-                                    if cartItems.items.isEmpty{
+                                    if cart.items.isEmpty{
                                         Text("Koszyk")
                                         Image(systemName: "cart").imageScale(.large)
                                     } else {
-                                        Text("Koszyk (\(cartItems.items.count))" )
+                                        Text("Koszyk (\(cart.items.count))" )
                                         Image(systemName: "cart.fill").imageScale(.large)
                                     }
                                 }
@@ -71,7 +94,7 @@ struct MusicDetails: View {
     }
     
     func addItemToCart (itemToAdd: Music) {
-        if self.cartItems.items.contains(where: {item in item.id == itemToAdd.id }) {
+        if self.cart.items.contains(where: {item in item.id == itemToAdd.id }) {
             self.showingAlert = true
         } else {
             let item = CartItem()
@@ -81,8 +104,14 @@ struct MusicDetails: View {
             item.price = musicItem.price
             item.mainImageName = musicItem.mainImageName
             item.amount = 1
-            self.cartItems.items.append(item)
+            self.cart.items.append(item)
         }
+    }
+}
+
+extension View {
+    func flipRotate(_ degrees : Double) -> some View {
+        return rotation3DEffect(Angle(degrees: degrees), axis: (x: 0.0, y: 1.0, z: 0.0))
     }
 }
 

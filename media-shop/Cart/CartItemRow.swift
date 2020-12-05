@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CartItemRow: View {
     @ObservedObject var cartItem : CartItem
-    @EnvironmentObject var cartItems: CartItems
+    @EnvironmentObject var cart: Cart
     @State private var showingAlert = false
     
     var body: some View {
@@ -56,7 +56,7 @@ struct CartItemRow: View {
         .alert(isPresented: $showingAlert) {
             Alert(title: Text("Czy na pewno chcesz usunąć ten przedmiot z koszyka?"),
                   primaryButton: .destructive(Text("Tak"), action: {
-                    cartItems.items.remove(at: cartItems.items.firstIndex(where: {item in item.id == cartItem.id })!)
+                    cart.items.remove(at: cart.items.firstIndex(where: {item in item.id == cartItem.id })!)
                   }),
                   secondaryButton: .cancel(Text("Nie")))
         }

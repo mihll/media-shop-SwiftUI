@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MusicTab: View {
     @State var showSheetView = false
-    @EnvironmentObject var cartItems: CartItems
+    @EnvironmentObject var cart: Cart
     
     var body: some View {
         NavigationView {
@@ -22,11 +22,11 @@ struct MusicTab: View {
                                     Button(action: {
                                         self.showSheetView.toggle()
                                     }){
-                                        if cartItems.items.isEmpty{
+                                        if cart.items.isEmpty{
                                             Text("Koszyk")
                                             Image(systemName: "cart").imageScale(.large)
                                         } else {
-                                            Text("Koszyk (\(cartItems.items.count))" )
+                                            Text("Koszyk (\(cart.items.count))" )
                                             Image(systemName: "cart.fill").imageScale(.large)
                                         }
                                     }

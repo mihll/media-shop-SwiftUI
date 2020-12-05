@@ -18,7 +18,7 @@ struct ProductList: View {
     var productListType: ProductListType
     var productListName: String
     @State var showSheetView = false
-    @EnvironmentObject var cartItems: CartItems
+    @EnvironmentObject var cart: Cart
     var body: some View {
         List() {
             switch productType {
@@ -31,8 +31,8 @@ struct ProductList: View {
                     MoviesListRow(movieItem: movie)
                 }
             case .book:
-                ForEach(getMusicProduct(listType: productListType)) { music in
-                    Text(music.title)
+                ForEach(getBooksProduct(listType: productListType)) { book in
+                    BooksListRow(bookItem: book)
                 }
             }
         }.navigationBarTitle(productListName, displayMode: .inline)
@@ -40,11 +40,11 @@ struct ProductList: View {
                                 Button(action: {
                                     self.showSheetView.toggle()
                                 }){
-                                    if cartItems.items.isEmpty{
+                                    if cart.items.isEmpty{
                                         Text("Koszyk")
                                         Image(systemName: "cart").imageScale(.large)
                                     } else {
-                                        Text("Koszyk (\(cartItems.items.count))" )
+                                        Text("Koszyk (\(cart.items.count))" )
                                         Image(systemName: "cart.fill").imageScale(.large)
                                     }
                                 }
@@ -74,6 +74,17 @@ func getMoviesProduct(listType: ProductListType) -> [Movie] {
         return movieData.shuffled()
     case .recommended:
         return movieData.shuffled()
+    }
+}
+
+func getBooksProduct(listType: ProductListType) -> [Book] {
+    switch listType {
+    case .new:
+        return bookData.shuffled()
+    case .best:
+        return bookData.shuffled()
+    case .recommended:
+        return bookData.shuffled()
     }
 }
 
