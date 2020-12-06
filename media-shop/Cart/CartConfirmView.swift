@@ -28,7 +28,7 @@ struct CartConfirmView: View {
                     Text("Razem")
                         .fontWeight(.bold)
                     Spacer()
-                    Text(String(format: "%.2f zł",cart.deliveryPrices[cart.deliveryIndex]+cart.getTotal()))
+                    Text(String(format: "%.2f zł",cart.getTotal()))
                         .fontWeight(.bold)
                 }
             }
@@ -115,6 +115,7 @@ struct CartConfirmView: View {
         .alert(isPresented: $showingConfirm) {
             Alert(title: Text("Twoje zamówienie zostało złożone!"),
                   dismissButton: .default(Text("OK"), action: {
+                    orderHistory.addOrderToHistory(order: cart);
                     cart.submitOrder();
                     showingConfirm = false;
                     showSheetView = false;

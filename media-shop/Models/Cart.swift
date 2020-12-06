@@ -8,7 +8,9 @@
 import Foundation
 import SwiftUI
 
-class Cart: ObservableObject {
+class Cart: ObservableObject, Identifiable {
+    var id: Int = 1;
+    var orderDate: Date = Date()
     @Published var items: [CartItem] = []
     @Published var deliveryName: String = ""
     @Published var deliveryAddress: String = ""
@@ -25,16 +27,42 @@ class Cart: ObservableObject {
     @Published var billingInvoice = false
     @Published var billingNIP: String = ""
     
+    init() {
+        
+    }
+    
+    init(copyFrom: Cart) {
+        self.id = copyFrom.id;
+        self.orderDate = Date();
+        self.items = copyFrom.items
+        self.deliveryName = copyFrom.deliveryName
+        self.deliveryAddress = copyFrom.deliveryAddress
+        self.deliveryPostcode = copyFrom.deliveryPostcode
+        self.deliveryCity = copyFrom.deliveryCity
+        self.deliveryIndex = copyFrom.deliveryIndex
+        self.deliveryOptions = copyFrom.deliveryOptions
+        self.deliveryPrices = copyFrom.deliveryPrices
+        self.billingSameAddress = copyFrom.billingSameAddress
+        self.billingName = copyFrom.billingName
+        self.billingAddress = copyFrom.billingAddress
+        self.billingPostcode = copyFrom.billingPostcode
+        self.billingCity = copyFrom.billingCity
+        self.billingInvoice = copyFrom.billingInvoice
+        self.billingNIP = copyFrom.billingNIP
+    }
+    
     func getTotal() -> Double {
         var total: Double = 0
         for item in self.items {
             total = total + (item.price * Double(item.amount))
         }
+        total = total + deliveryPrices[deliveryIndex]
         return total
     }
     
     func submitOrder() {
-        items.removeAll();
+        id = id + 1;
+        items.removeAll()
         deliveryName = ""
         deliveryAddress = ""
         deliveryPostcode = ""

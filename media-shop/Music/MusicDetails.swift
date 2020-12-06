@@ -38,7 +38,7 @@ struct MusicDetails: View {
                     .modifier(ParallaxMotionModifier(magnitude: 10))
                     .flipRotate(-180 + flipDegrees).opacity(flipped ? 1.0 : 0.0)
             }
-            .animation(.easeInOut(duration: 0.25))
+            .animation(.easeInOut(duration: 0.5))
             .onTapGesture {
                 self.flipped.toggle()
             }
@@ -111,7 +111,7 @@ struct MusicDetails: View {
 
 extension View {
     func flipRotate(_ degrees : Double) -> some View {
-        return rotation3DEffect(Angle(degrees: degrees), axis: (x: 0.0, y: 1.0, z: 0.0))
+        return rotation3DEffect(Angle(degrees: degrees), axis: (x: 0.0, y: -1.0, z: 0.0))
     }
 }
 
